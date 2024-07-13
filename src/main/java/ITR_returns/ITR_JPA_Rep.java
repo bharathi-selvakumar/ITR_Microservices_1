@@ -7,4 +7,5 @@ import java.util.List;
 
 @Repository
 public interface ITR_JPA_Rep extends JpaRepository<ITR_Returns_Entity,Integer> {
+    List<ITR_Returns_Entity> findAllByItrNumber(int itrNumber);
 }

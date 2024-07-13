@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 public class ITR_Returns_Entity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
+    private int formId;
     private int itrNumber;
     private int year;
     private String formType;

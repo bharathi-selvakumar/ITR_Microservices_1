@@ -31,4 +31,8 @@ public class ITR_Services {
         jpa.deleteById(id);
     }
 
+    public List<ITR_Returns_Entity> get_itr(int itr_id){
+        return jpa.findAllByItrNumber(itr_id);
+    }
+
 }

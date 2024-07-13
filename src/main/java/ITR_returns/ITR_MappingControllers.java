@@ -17,7 +17,12 @@ public class ITR_MappingControllers {
         return services.read();
     }
 
-    @PostMapping("/")
+    @GetMapping("/getItr/{id}")
+    public List<ITR_Returns_Entity> get_itr(@PathVariable("id") int id){
+        return services.get_itr(id);
+    }
+
+    @PostMapping("/post")
     public ITR_Returns_Entity post(@RequestBody ITR_Returns_Entity data){
         return services.create(data);
     }
@@ -42,6 +47,4 @@ public class ITR_MappingControllers {
                 throw e;
        }
     }
-
-
 }
